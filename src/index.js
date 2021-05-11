@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import '@blueprintjs/icons/lib/css/blueprint-icons.css';
+import '@blueprintjs/core/lib/css/blueprint.css';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@emotion/react';
+import theme from "./theme";
+import Router from "./Router";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <Router />
+  </ThemeProvider>
+  ,
   document.getElementById('root')
 );
 
