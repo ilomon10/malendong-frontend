@@ -10,7 +10,7 @@ const Sidenav = () => {
       {navigation.items.map((item) => (
         <Button
           key={item.path}
-          active={item.path === navigation.current.path}
+          active={navigation.current && item.path === navigation.current.path}
           minimal={true}
           large={true}
           icon={item.icon || "blank"}
