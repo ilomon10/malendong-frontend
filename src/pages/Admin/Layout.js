@@ -1,4 +1,4 @@
-import { Flex } from "components";
+import { Box, Flex } from "components";
 import Router from "./Router";
 import Sidenav from "./Sidenav";
 
@@ -11,12 +11,13 @@ const Layout = () => {
       left: 0,
       bottom: 0
     }}>
-      <Flex sx={{
-        width: 42,
-        overflow: "hidden"
-      }}>
+      <Box 
+        sx={{
+          width: 41
+        }}
+      >
         <Sidenav />
-      </Flex>
+      </Box>
       <Flex sx={{ flexGrow: 1 }}>
         <Router />
       </Flex>
