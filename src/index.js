@@ -7,10 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@emotion/react';
 import theme from "./theme";
 import Router from "./Router";
+import { ClientProvider } from 'components/client';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <Router />
+    <ClientProvider>
+      <Router />
+    </ClientProvider>
   </ThemeProvider>
   ,
   document.getElementById('root')
