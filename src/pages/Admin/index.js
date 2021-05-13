@@ -1,7 +1,7 @@
 import { AdminProvider } from "./hoc";
 import Layout from "./Layout";
-import Settings from "./Settings";
-import Users from "./Users";
+import Settings from "pages/Admin.Settings";
+import Users from "pages/Admin.Users";
 
 const Navigation = [
   {
