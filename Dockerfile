@@ -1,3 +1,4 @@
+# Building using node
 FROM node:12.20.1 as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
@@ -7,6 +8,7 @@ RUN npm ci --silent
 COPY . ./
 RUN npm run build
 
+# Serving static frontend files using nginx
 FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
