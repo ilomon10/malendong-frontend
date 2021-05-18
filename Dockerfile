@@ -1,4 +1,4 @@
-# Building using node
+# Start app using node
 FROM node:12.20.1 as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
