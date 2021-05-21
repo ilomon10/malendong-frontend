@@ -35,10 +35,10 @@ export const typography = {
     48
   ],
   "lineHeights": {
-      "condensedUltra": 1,
-      "condensed": 1.25,
-      "default": 1.5
-    }
+    "condensedUltra": 1,
+    "condensed": 1.25,
+    "default": 1.5
+  }
 }
 
 export const fonts = {
@@ -46,9 +46,20 @@ export const fonts = {
   "monospace": 'Menlo, monospace'
 }
 
+export const breakpoints = ['40em', '52em', '64em', '80em'];
+
+export const container = ["100%", breakpoints[0], breakpoints[1], breakpoints[2], breakpoints[3]];
+container.fluid = container[0];
+container.sm = container[1];
+container.md = container[2];
+container.lg = container[3];
+container.xl = container[4];
+
 export default { // eslint-disable-line import/no-anonymous-default-export
+  breakpoints,
   colors,
   spacing,
   typography,
-  fonts
+  fonts,
+  container
 }
