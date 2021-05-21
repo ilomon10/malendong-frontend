@@ -4,17 +4,19 @@ import { Box, Flex } from "components";
 import { useCallback, useRef, useState } from "react";
 import { useNav } from "./hoc";
 
-const NavButton = ({ icon, text, ...props }) => {
+const NavButton = ({ icon, text, sx, ...props }) => {
   const theme = useTheme();
   return (
     <Box
       sx={{
         [`.${Classes.BUTTON}`]: {
+          height: "100%",
           px: 2,
           display: "flex",
           justifyContent: "start",
           borderRadius: 0,
-        }
+        },
+        ...sx
       }}
     >
       <Button
@@ -31,7 +33,8 @@ const NavButton = ({ icon, text, ...props }) => {
               }
             }}>
             <Icon icon={icon} />
-          </Box>}
+          </Box>
+        }
         text={
           <Text ellipsize={true}>
             {text}
@@ -45,7 +48,7 @@ const NavButton = ({ icon, text, ...props }) => {
 
 const Sidenav = () => {
   const navigation = useNav();
-  const [isShow, setIsShow] = useState(true);
+  const [isShow, setIsShow] = useState(false);
   const timeoutRef = useRef();
   const mouseEvent = useCallback((type) => {
     if (type === "enter") {
@@ -80,12 +83,15 @@ const Sidenav = () => {
       onMouseEnter={() => mouseEvent("enter")}
       onMouseLeave={() => mouseEvent("leave")}
     >
-      <NavButton
-        icon="menu"
-        title="Menu"
-        text="Malendong"
-        onClick={() => setIsShow(isShow => !isShow)}
-      />
+      <Flex sx={{ height: 50, width: "100%" }}>
+        <NavButton
+          sx={{ width: "100%" }}
+          icon="menu"
+          title="Menu"
+          text="Malendong"
+          onClick={() => setIsShow(isShow => !isShow)}
+        />
+      </Flex>
       <Box className={Classes.DIVIDER} />
       {navigation.items.map((item) => (
         <NavButton

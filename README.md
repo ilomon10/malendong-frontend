@@ -47,14 +47,14 @@ $ npm start     # Menjalankan aplikasi dalam mode pengembang.
 $ npm run test  # Mengeksekusi test fungsional dalam mode pantauan perubahan.
 $ npm run build # Membangun aplikasi untuk produksi ke dalam folder build.
 
-## Note: this is a one-way operation. Once you `eject`, you can’t go back!
-$ npm run eject # This command will remove the single build dependency from your project.
+## Note: ini operasi satu aray. Begitu anda `eject`, anda tidak dapat kembali !
+$ npm run eject # Perintah ini akan menghapus dependensi build tunggal dari proyek Anda.
 ```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Bagian ini dipindahkan ke halaman berikut: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+#### `npm run build` gagal me-minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bagian ini dipindahkan ke halaman berikut: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
